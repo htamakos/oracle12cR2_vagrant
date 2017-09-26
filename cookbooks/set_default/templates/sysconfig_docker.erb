@@ -1,0 +1,5 @@
+export http_proxy=<%="#{node[:http_proxy]}" %>
+export https_proxy=<%= "#{node[:http_proxy]}" %>
+
+other_args=" --storage-opt dm.basesize=20G"
+

@@ -1,0 +1,12 @@
+export ORACLE_BASE=<%= node[:oracle][:base] %>
+export ORACLE_HOME=<%= node[:oracle][:database][:home] %>
+export ORACLE_SID=<%= node[:oracle][:database][:sid] %>
+export NLS_LANG=Japanese_Japan.AL32UTF8
+export LANG=ja_JP.UTF-8
+
+PATH=$PATH:$HOME/.local/bin:$HOME/bin:$ORACLE_HOME/bin
+
+export PATH
+
+alias sqlplus="rlwrap sqlplus"
+alias sys="sqlplus / as sysdba"
